@@ -1,0 +1,217 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+%\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{TSAI}{Yun Chen}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{500 College Ave, Swarthmore, PA 19081 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\newcommand*{\customcvedu}[7][.25em]{
+    \begin{tabular}{@{}l} 
+        {\bfseries #4}
+      \end{tabular}
+      \hfill% move it to the right
+      \begin{tabular}{l@{}}
+         {\bfseries #5}
+      \end{tabular} \\
+      \begin{tabular}{@{}l} 
+        {\itshape #3}
+      \end{tabular}
+      \hfill% move it to the right
+      \begin{tabular}{l@{}}
+         {\itshape #2}
+      \end{tabular}
+      \ifx&#7&%
+      \else{\\%
+        \begin{minipage}{\maincolumnwidth}%
+          \small#7%
+        \end{minipage}}\fi%
+      \par\addvspace{#1}
+}
+  
+\newcommand*{\customcventry}[5][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #3}
+  \end{tabular} 
+  %\begin{tabular}{@{}l} 
+  %  {\itshape #1}
+  %\end{tabular}
+  %\hfill% move it to the right
+  %\begin{tabular}{l@{}}
+  %   {\itshape #2}
+  %\end{tabular}
+  \ifx&#5&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#5%
+    \end{minipage}}\fi%
+  %\par\addvspace{#1}
+  }
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-10mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ \faEnvelopeO\enspace yctsai@connect.ust.hk & \faGithub\enspace wincentsai & \faMobile\enspace +852-54418187\\  
+\end{tabular}
+\end{center}
+
+\section{SUMMARY}
+Year 2 students majoring in Applied Mathematics. 
+Proficient in C/C++, Python and NodeJS.
+Research interest focus on theoretical computer science and scientific computation.
+
+\section{EDUCATION}
+{\customcvedu{Expected Graduation: June 2024}{BSc in Mathematics}{Hong Kong University of Science and Technology}{}{}{}}
+
+\section{COURSE TAKEN}
+
+Only selected courses related to major are recorded.\\
+
+{\customcventry{Summer 2018}{CUHK EPYMT}{}
+{\begin{itemize}
+    \item SAYT 1114 Number Theory and Cryptoraphy\hfill grade: Distinction
+\end{itemize}
+}
+}
+
+{\customcventry{Fall 2020}{HKUST}{}
+{\begin{itemize}
+  \item MATH 1023 Honor Calculus I \hfill        grade: A
+  \item COMP 2011 Programming in C++ \hfill      grade: A
+\end{itemize}
+}
+}
+
+{\customcventry{Spring 2021}{HKUST}{}
+{\begin{itemize}
+  \item MATH 1024 Honor Calculus II \hfill                                  grade: A-
+  \item COMP 2012 Object-Oriented Programming and Data Structures \hfill    grade: A+
+\end{itemize}
+}
+}
+
+{
+  \customcventry{Summer 2021}{HKUST}{}
+{\begin{itemize}
+  \item UROP 1100 Efficient Algorithm on Visualizing Dynamical Surface \hfill grade: P*
+\end{itemize}
+}
+}
+
+{\customcventry{Fall 2021}{HKUST}{}
+{\begin{itemize}
+  \item MATH 2023 Multivariable Calculus \hfill grade: A
+  \item COMP 2711H Honor Discrete Mathematics Tool \hfill grade: A+
+\end{itemize}
+}
+}
+
+{\customcventry{Spring 2022}{HKUST}{}
+{\begin{itemize}
+  \item MATH 2043 Honor Mathematical Analysis \hfill grade: A-
+  \item MATH 2431 Honor Probability \hfill grade: A-
+  \item MATH 2411 Applied Statistic \hfill grade: A-
+  \item UROP 1100 Parameterized algorithm for static program analysis \hfill grade: P*
+\end{itemize}
+}
+}
+
+{\customcventry{Summer 2022}{HKUST}{}
+{\begin{itemize}
+  \item UROP 2100 Parameterized algorithm for static program analysis \hfill grade: P*
+\end{itemize}
+}
+}
+
+\section{ADDITIONAL}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Programming Languages: C, C++, Javascript, NodeJS, Python
+		\end{itemize}}%
+\end{minipage}%
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
