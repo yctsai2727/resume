@@ -31,28 +31,23 @@
 
 \usepackage{import}
 
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+    }%
+}
+\newcommand{\cvreference}[5]{%
+    \textbf{#1}\hfill
+    \ifthenelse{\equal{#5}{}}{}{\emailsymbol~\texttt{#5}\newline}% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+}
+
 % personal data
-\name{TSAI}{Yun Chen}
-% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-%\address{500 College Ave, Swarthmore, PA 19081 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
-% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
-% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
-% \extrainfo{}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+\name{Yun Chen}{TSAI}
 
 \newcommand*{\customcvedu}[7][.25em]{
     \begin{tabular}{@{}l} 
@@ -134,80 +129,93 @@
 \end{center}
 
 \section{SUMMARY}
-Year 2 students majoring in Applied Mathematics. 
-Proficient in C/C++, Python and NodeJS.
-Research interest focus on theoretical computer science and scientific computation.
+I am a Year 3 undergraduate student at HKUST, major in applied Mathematics. I am experienced in doing academic research and currently having two research projects conducted under the supervision of professor ShingYu Leung and Amir GOHARSHADY respectively, the reseach area focus on different aspect of theoretical computer science (TCS) and scientific computation. Proficient in programming with C/C++, Python and NodeJS. Planning to pursue a Ph.D. in TCS-related area, reseach insterest especially focus in complexity theory, automata theory and mathematical aspect in algorithm design.
 
 \section{EDUCATION}
-{\customcvedu{Expected Graduation: June 2024}{BSc in Mathematics}{Hong Kong University of Science and Technology}{}{}{}}
+{\customcvedu{Expected Graduation: June 2024}{BSc in Applied Mathematics}{Hong Kong University of Science and Technology (HKUST)}{}{}{}}
 
 \section{COURSE TAKEN}
 
 Only selected courses related to major are recorded.\\
 
-{\customcventry{Summer 2018}{CUHK EPYMT}{}
+{\customcventry{MATH course}{HKUST}{}
 {\begin{itemize}
-    \item SAYT 1114 Number Theory and Cryptoraphy\hfill grade: Distinction
+  \item MATH 1023 Honor Calculus I \hfill             grade: A
+  \item MATH 1024 Honor Calculus II \hfill            grade: A-
+  \item MATH 2043 Honor Mathematical Analysis \hfill  grade: A-
+  \item MATH 2431 Honor Probability \hfill            grade: A-
+  \item MATH 3043 Honor Real Analysis \hfill          grade: N/A
 \end{itemize}
-}
-}
+}}
+\\
 
-{\customcventry{Fall 2020}{HKUST}{}
+{\customcventry{COMP course}{HKUST}{}
 {\begin{itemize}
-  \item MATH 1023 Honor Calculus I \hfill        grade: A
-  \item COMP 2011 Programming in C++ \hfill      grade: A
-\end{itemize}
-}
-}
-
-{\customcventry{Spring 2021}{HKUST}{}
-{\begin{itemize}
-  \item MATH 1024 Honor Calculus II \hfill                                  grade: A-
+  \item COMP 2011 Programming in C++ \hfill           grade: A
   \item COMP 2012 Object-Oriented Programming and Data Structures \hfill    grade: A+
+  \item COMP 2711H Honor Discrete Mathematics Tool \hfill grade: A+
+  \item COMP 3711 Design and Analysis of Algorithms \hfill grade: B+
+  \item COMP 5711 Introduction to Advanced Algorithmic Techniques \hfill grade: N/A
+  \item COMP 3721 Theory of computation \hfill grade: N/A
+  \item COMP 3031 Principle of Programming Language \hfill grade: N/A
 \end{itemize}
-}
-}
+}}
+\\
 
-{
-  \customcventry{Summer 2021}{HKUST}{}
+{\customcventry{research course}{HKUST}{}
 {\begin{itemize}
   \item UROP 1100 Efficient Algorithm on Visualizing Dynamical Surface \hfill grade: P*
-\end{itemize}
-}
-}
-
-{\customcventry{Fall 2021}{HKUST}{}
-{\begin{itemize}
-  \item MATH 2023 Multivariable Calculus \hfill grade: A
-  \item COMP 2711H Honor Discrete Mathematics Tool \hfill grade: A+
-\end{itemize}
-}
-}
-
-{\customcventry{Spring 2022}{HKUST}{}
-{\begin{itemize}
-  \item MATH 2043 Honor Mathematical Analysis \hfill grade: A-
-  \item MATH 2431 Honor Probability \hfill grade: A-
-  \item MATH 2411 Applied Statistic \hfill grade: A-
   \item UROP 1100 Parameterized algorithm for static program analysis \hfill grade: P*
-\end{itemize}
-}
-}
-
-{\customcventry{Summer 2022}{HKUST}{}
-{\begin{itemize}
   \item UROP 2100 Parameterized algorithm for static program analysis \hfill grade: P*
+  \item SCIE 3500 IRE research Project I \hfill grade: N/A
+\end{itemize}
+}}
+
+\newpage
+\section{RESEARCH PROJECT}
+{\customcventry{Project title}{Supervisor}{}{}
+}\enspace\\
+
+{\customcventry{Efficient algorithm on Visualizing Dynamical Surface}{Dr. LEUNG Shing Yu}{}
+{\begin{itemize}
+  \item In this project we particularly focus on developping efficient methods for visualizing the Lagrangian Coherent Structure. Several approaches have been studied including the traditional Finite time Lyapuonv Exponent, Clustering approach and also comparison between local trajectories. The project is still under progress.
 \end{itemize}
 }
-}
+}\enspace\\
 
-\section{ADDITIONAL}
-\begin{minipage}{\maincolumnwidth}%
-	\small{
-    	\begin{itemize}
-          \item Programming Languages: C, C++, Javascript, NodeJS, Python
-		\end{itemize}}%
-\end{minipage}%
+{\customcventry{Parameterized Algorithm and static program analysis}{Dr. Amir GOHARSHADY}{}
+{\begin{itemize}
+  \item This project is focusing on improving existing method for static program analysis, in particular on automata and model checking. Our main interest is to try to reduce the complexity through parameterization since it has been exposed that most practical system has small treewidth in its control flow graph. Another focus is on the automata side since model checking can be well formulated in terms of LTL logic which is in equivalent with Büchi automata, hence a parameterized algorithm on improving time for verifying several properties like language inclusion and universality would be interesting both theoretically and practically. The project is still under progress.
+\end{itemize}
+}}
+
+\section{Scholarship}
+\begin{itemize}
+  \item Chern Class Scholarship
+\end{itemize}
+
+\section{Reference}
+\cvreference{Shing Yu LEUNG}
+    {Professor, Department of Mathematics}
+    {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
+    {}
+    {masyleung@ust.hk}
+
+
+\cvreference{Amir GOHARSHADY}
+    {Assistant Professor, Department of Computer Science and Engineering}
+    {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
+    {}
+    {goharshady@cse.ust.hk}
+
+  
+% \section{ADDITIONAL}
+% \begin{minipage}{\maincolumnwidth}%
+% 	\small{
+%     	\begin{itemize}
+%           \item Programming Languages: C, C++, Javascript, NodeJS, Python
+% 		\end{itemize}}%
+% \end{minipage}%
 
 %-----       letter       ---------------------------------------------------------
 
