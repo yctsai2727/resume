@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % modern themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -16,7 +16,7 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 %\usepackage{fontspec}
 \usepackage{tabularx}
 \usepackage{ragged2e}
@@ -24,7 +24,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.9,bottom=3pt,top=10pt]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -39,11 +39,11 @@
     }%
 }
 \newcommand{\cvreference}[5]{%
-    \textbf{#1}\hfill
+    \textbf{#1}\hfill%
     \ifthenelse{\equal{#5}{}}{}{\emailsymbol~\texttt{#5}\newline}% Name
     \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
     \ifthenelse{\equal{#3}{}}{}{#3\newline}%
-    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4}%
 }
 
 % personal data
@@ -113,6 +113,8 @@
 
 \setlength{\tabcolsep}{12pt}
 
+\let\cleardoublepage=\clearpage
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -124,12 +126,12 @@
 
 \begin{center}
 \begin{tabular}{ c c c c }
- \faEnvelopeO\enspace yctsai@connect.ust.hk & \faGithub\enspace yctsai2727 & \faMobile\enspace +852-54418187\\  
+ \emailsymbol yctsai@connect.ust.hk & \faGithub\enspace yctsai2727 & \faMobile\enspace +852-54418187\\  
 \end{tabular}
 \end{center}
 
 \section{SUMMARY}
-I am a Year 4 undergraduate student at HKUST, major in applied Mathematics. Experienced in academic research and various research projects have been carried out under the supervision of professor Shing Yu LEUNG, Amir GOHARSHADY and Jean-François RASKIN, the reseach projects focus on different aspects of scientific computation, algorithm design, formal methods and complexity theory. My reseach interest falls generally in the large area of formal methods, automata theory and complexity theory, in particular I am interesting in combining the use of different mathematical tools for improving the algorithm and prove intersted result in the above area.
+I am a Year 4 undergraduate student at HKUST, majoring in Applied Mathematics. Experienced in academic research and finished various research projects under the supervision of Professor Shing Yu LEUNG, Amir GOHARSHADY, and Jean-François RASKIN. Those research projects focus on different aspects like scientific computation, algorithm design, formal methods, and complexity theory. My research interest mainly falls in the large area of formal methods, automata theory, and complexity theory, with the combination of a wide range of mathematical tools including but not limited to differential equations, optimization techniques, probability theory, algebraic method, to develop efficient algorithms and construct proofs for correctness, convergence and hardness result in the above field.
 
 \section{EDUCATION}
 {\customcvedu{Expected Graduation: June 2024}{BSc in Applied Mathematics}{Hong Kong University of Science and Technology (HKUST)}{}{}{}}
@@ -183,21 +185,21 @@ I am a Year 4 undergraduate student at HKUST, major in applied Mathematics. Expe
 
 {\customcventry{Efficient algorithm on Visualizing Dynamical Surface}{Dr. Shing Yu LEUNG}{}
 {\begin{itemize}
-  \item In this project we particularly focus on developping efficient methods for visualizing the Lagrangian Coherent Structure. Several approaches have been studied including the traditional Finite time Lyapuonv Exponent, Clustering approach and also comparison between local trajectories. 
+  \item In this project, we aim to develop efficient methods for visualizing the Lagrangian Coherent Structure under different settings, with a particular focus on the Lagrangian coherent structure. Various approaches like Finite-time Lyapunov Exponent, clustering methods, and trajectory analysis have been studied. In addition, we also look into the stochastic setting and study the extension of previous approaches.
 \end{itemize}
 }
 }\enspace\\
 
 {\customcventry{Parameterized Algorithms in Static Program Analysis}{Dr. Amir GOHARSHADY}{}
 {\begin{itemize}
-  \item This project is focusing on improving the existing algorithm for static program analysis through parameterization. The major motivation behind is that many of the problems in the field are proven to be at least NP-hard in general, but the practical use-case might exhibit special structures or carry small parameters. We look into problems like Algebraic program analysis and probabilistic model checking and looks for potentially useful parameterization for the problems.
+  \item This project is focusing on improving the existing algorithm for static program analysis through parameterization. The major motivation behind this is that many of the problems in the field are proven to be at least NP-hard in general, but the practical use case might exhibit special structures or carry small parameters. We look into problems like Algebraic program analysis and probabilistic model checking to look for potentially useful parameterization for the problems.
 \end{itemize}
 }
 }\enspace\\
 
 {\customcventry{Automata Learning and Program Synthesis}{Dr. Jean-François RASKIN}{}
 {\begin{itemize}
-  \item This project aims to study the use of automata learning to program synthesis problem. In particular we looked into the problems of example-guided synthesis, we focus on the case when a stochastic environment input is involved and attempt to formulate a way to generate a set of optimal realizable examples of system trace with respect to a certain cost/reward function.
+  \item This project aims to study the use of automata learning to program synthesis problems. In particular, we looked into the problems of example-guided synthesis, we focus on the case when a stochastic environment input is involved and attempt to formulate a way to generate a set of optimal realizable examples of system trace with respect to a certain cost/reward function.
 \end{itemize}
 }}
 
@@ -216,19 +218,19 @@ Please contact the following professors for letter of recommendation.\\
     {}
     {masyleung@ust.hk}
 
-
+\vspace{-5pt}
 \cvreference{Amir GOHARSHADY}
     {Assistant Professor, Department of Computer Science and Engineering}
     {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
     {}
     {goharshady@cse.ust.hk}
 
+\vspace{-5pt}
 \cvreference{Jean-François RASKIN}
     {Professor, Department of Computer Science}
     {Université Libre de Bruxelles, Bruxelles, Belgium}
     {}
-    {jraskin@ulb.ac.be}
-  
+    {jraskin@ulb.ac.be}\nolinebreak%
 % \section{ADDITIONAL}
 % \begin{minipage}{\maincolumnwidth}%
 % 	\small{
@@ -236,9 +238,7 @@ Please contact the following professors for letter of recommendation.\\
 %           \item Programming Languages: C, C++, Javascript, NodeJS, Python
 % 		\end{itemize}}%
 % \end{minipage}%
-
 %-----       letter       ---------------------------------------------------------
-
 \end{document}
 
 
