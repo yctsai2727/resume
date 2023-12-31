@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1697564062 "c:/Users/wince/Documents/UST/resume/resume/resume.tex" "resume.pdf" "resume" 1697564064 0
-  "c:/Users/wince/Documents/UST/resume/resume/resume.tex" 1697564059 10717 352c30fd6f444eba917be34a2362f437 ""
+["pdflatex"] 1704006281 "c:/Users/wince/Documents/UST/resume/resume/resume.tex" "resume.pdf" "resume" 1704006283 0
+  "c:/Users/wince/Documents/UST/resume/resume/resume.tex" 1704006281 9047 9e1246c997f3cb522f47f7b7709ddd74 ""
   "d:/Latex/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1681647216 2920 d63721872b8c77041b88e51b8f7c291d ""
   "d:/Latex/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc" 1681647216 3083 a707712f77b073b3833e4b1334a30e99 ""
   "d:/Latex/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1681647216 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -177,9 +177,9 @@
   "d:/Latex/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1681651888 4683159 606fb39db4b36f7a182cb712d07fb561 ""
   "d:/Latex/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1681651964 7885404 305cb09779970956816a29e54f6513b9 ""
   "d:/Latex/texlive/2023/texmf.cnf" 1681651866 713 e69b156964470283e0530f5060668171 ""
-  "resume.aux" 1697564063 1158 7d0b9496ecfdcda4f2a3fa233b6363af "pdflatex"
-  "resume.out" 1697564063 576 481ec70291640363b7ecc45f3b11e6c2 "pdflatex"
-  "resume.tex" 1697564059 10717 352c30fd6f444eba917be34a2362f437 ""
+  "resume.aux" 1704006283 1158 7d0b9496ecfdcda4f2a3fa233b6363af "pdflatex"
+  "resume.out" 1704006283 576 481ec70291640363b7ecc45f3b11e6c2 "pdflatex"
+  "resume.tex" 1704006281 9047 9e1246c997f3cb522f47f7b7709ddd74 ""
   (generated)
   "resume.aux"
   "resume.log"
