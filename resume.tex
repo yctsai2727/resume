@@ -15,8 +15,8 @@
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
+%\usepackage{fontawesome5}
 \usepackage[utf8]{inputenc}
-\usepackage{fontawesome5}
 %\usepackage{fontspec}
 \usepackage{tabularx}
 \usepackage{ragged2e}
@@ -24,7 +24,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.9,bottom=3pt,top=10pt]{geometry}
+\usepackage[scale=0.85]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -126,7 +126,7 @@
 
 \begin{center}
 \begin{tabular}{ c c c c }
- \emailsymbol yctsai@connect.ust.hk & \faGithub\enspace yctsai2727 & \faMobile\enspace +852-54418187\\  
+ \emailsymbol \href{mailto://yctsai@connect.ust.hk}{yctsai@connect.ust.hk} & \faLink\enspace \href{https://yctsai.site}{yctsai.site} & \faGithub\enspace \href{https://github.com/yctsai2727}{yctsai2727} & \faMobile\enspace +852-54418187\\  
 \end{tabular}
 \end{center}
 
@@ -134,7 +134,7 @@
 I am a Year 4 undergraduate student at HKUST, majoring in Applied Mathematics. Experienced in academic research and finished various research projects under the supervision of Professor Shing Yu LEUNG, Amir GOHARSHADY, and Jean-François RASKIN. Those research projects focus on different aspects like scientific computation, algorithm design, formal methods, and complexity theory. My research interest mainly falls in the large area of formal methods, automata theory, and complexity theory, with the combination of a wide range of mathematical tools including but not limited to differential equations, optimization techniques, probability theory, algebraic method, to develop efficient algorithms and construct proofs for correctness, convergence and hardness result in the above field.
 
 \section{EDUCATION}
-{\customcvedu{Expected Graduation: June 2024}{BSc in Applied Mathematics}{Hong Kong University of Science and Technology (HKUST)}{}{}{}}
+{\customcvedu{Graduation: January 2024}{BSc in Mathematics}{Hong Kong University of Science and Technology (HKUST)}{}{}{}}
 
 \section{PUBLICATION}
 \begin{itemize}
@@ -165,36 +165,37 @@ I am a Year 4 undergraduate student at HKUST, majoring in Applied Mathematics. E
 {\begin{itemize}
   \item This project aims to study the use of automata learning to program synthesis problems. In particular, we looked into the problems of example-guided synthesis, we focus on the case when a stochastic environment input is involved and attempt to formulate a way to generate a set of optimal realizable examples of system trace with respect to a certain cost/reward function.
 \end{itemize}
-}}
+}}\enspace\\
 
+%\newpage
 \section{Scholarship}
 \begin{itemize}
   \item Chern Class Talent Scholarship
   \item HKSAR Government Scholarship Fund - Reaching Out Award
 \end{itemize}
 
-\section{Reference}
-Please contact the following professors for letter of recommendation.\\
+% \section{Reference}
+% Please contact the following professors for letter of recommendation.\\
 
-\cvreference{Shing Yu LEUNG}
-    {Professor, Department of Mathematics}
-    {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
-    {}
-    {masyleung@ust.hk}
+% \cvreference{Shing Yu LEUNG}
+%     {Professor, Department of Mathematics}
+%     {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
+%     {}
+%     {masyleung@ust.hk}
 
-\vspace{-5pt}
-\cvreference{Amir GOHARSHADY}
-    {Assistant Professor, Department of Computer Science and Engineering}
-    {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
-    {}
-    {goharshady@cse.ust.hk}
+% \vspace{-5pt}
+% \cvreference{Amir GOHARSHADY}
+%     {Assistant Professor, Department of Computer Science and Engineering}
+%     {Hong Kong University of Science and Technology, Clear Water Bay, Hong Kong}
+%     {}
+%     {goharshady@cse.ust.hk}
 
-\vspace{-5pt}
-\cvreference{Jean-François RASKIN}
-    {Professor, Department of Computer Science}
-    {Université Libre de Bruxelles, Bruxelles, Belgium}
-    {}
-    {jraskin@ulb.ac.be}\nolinebreak%
+% \vspace{-5pt}
+% \cvreference{Jean-François RASKIN}
+%     {Professor, Department of Computer Science}
+%     {Université Libre de Bruxelles, Bruxelles, Belgium}
+%     {}
+%     {jraskin@ulb.ac.be}\nolinebreak%
 %-----       letter       ---------------------------------------------------------
 \end{document}
 
